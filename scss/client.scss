@@ -1,0 +1,25 @@
+.cover-client {
+	p {
+		font-size: 20px;
+		font-size: 1.25rem;
+	}
+	.col-xs-3 {
+		padding-left: 0;
+	}
+	.img-client {
+		margin: 70px 0;
+		a {
+			cursor: default;
+			img {
+				opacity: .6;
+    			transition: opacity .2s ease-in-out;
+			}
+			&:hover, &:focus {
+				cursor: default;
+				img {	
+					opacity: 1;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,373 @@
+/*
+ * Cover
+ */
+.cover {
+	background-color: #fffaed;
+	min-height: 100vh;
+	position: relative;
+	.footer {
+		bottom: 27px;
+		position: absolute;
+		left:40px;
+		right: 40px;
+	}
+	&.cover-dark {
+    	height: 100vh;
+		background-color: #191919;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+}
+.cover-dark.cover {
+	.footer {
+		display: none;
+		position: fixed;
+		opacity: 0;
+		.lang {
+			a {
+				color: rgba(255,255,255,.5);
+				&.active, &:hover {
+					color: rgba(255,255,255,.5);
+				}
+			}
+		}
+		[class^="icon-"], [class*=" icon-"] {
+			color: rgba(255,255,255,.5);
+		}
+		&.in {
+			opacity: 1;
+		}
+	}
+	&.active-cover {
+		.footer {
+			display: block;
+		}
+	}
+}
+/*
+ * Footer
+ */
+.mastfoot {
+  color: #999; /* IE8 proofing */
+  color: rgba(255,255,255,.5);
+}
+
+.heading {
+	padding: 0 80px 0 0;
+	h1 {
+		line-height: 0.9em;
+		margin-top: 0;
+		font-family: 'Proxima Nova';
+		font-weight: 900;
+		color: black;
+		text-align: left;
+		opacity: 0;
+		font-size: 240px;
+		font-size: 15.6rem;
+		@media (min-width: 1600px) {
+			font-size: 18.10464vw;
+		}
+		span {
+			opacity: 0;
+		}
+		span:nth-child(3):after {
+			display: block;
+			content: ' ';
+			clear: both;
+		}
+	}
+}
+.first-lead {
+	padding-top: 14px;
+	@media (min-width: $max-flex-font) {
+		padding-top: 22px;
+	}
+}
+.icon-arrow-down {
+	font-size: 1.3rem;
+}
+.list-social li {
+	padding-left: 29px;
+	padding-right: 0;
+	a {
+		font-size: $font-size-nav;
+		text-decoration: none;
+		&:hover, &:focus {
+			text-decoration: none;
+			span {
+				color:#000;
+			}
+		}
+	}
+}
+.heading h1 {
+	animation-name: showTitle;
+	animation-iteration-count: 1;
+	animation-duration: .2s;
+	animation-delay: 1s;
+	animation-fill-mode: forwards;
+}
+@keyframes showTitle {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+$duration: 0.12;
+
+.showTitle .heading h1 span {
+	animation-fill-mode: forwards;
+	@for $i from 1 through 10 {
+		&:nth-child( #{$i} ) {
+			animation-name: showLetters;
+			animation-duration: #{$duration * (10.5 - $i)}s;
+			animation-delay: #{1 + $duration*$i}s;
+		}
+	}
+}
+
+@keyframes showLetters {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.masthead {
+	z-index: 3;
+	width: 100%;
+}
+.masthead, .footer, .caption {
+	opacity: 0;
+	transition: opacity 1s ease-in-out .2s;
+}
+.showed {
+	.masthead, .footer, .caption {
+		opacity: 1;
+	}
+	.heading h1 span {
+		opacity: 1;
+		&:nth-child(8), &:nth-child(9), &:nth-child(10) {
+			transition: color 1s ease-in-out;
+			color: rgba(0,0,0,0.07);
+		}
+	}
+}
+@media (min-width: $screen-md-min) {
+	.caption {
+		width: 50%;
+		position: absolute;
+		right: 0;
+		top:0;
+		padding-left: 6rem;
+		z-index: 1;
+	}
+	.cover.cover-first {
+		display: flex;
+		ms-display: flex;
+		align-items: center;
+		.row-main {
+			position: relative;
+		}
+	}
+
+	/*
+ 	 * Affix and center
+ 	 */
+	/* Start the vertical centering */
+	.site-wrapper-inner {
+		vertical-align: middle;
+	}
+  	/* Handle the widths */
+	.masthead,
+	.mastfoot,
+	.cover-container {
+		width: 100%; /* Must be percentage or pixels for horizontal alignment */
+	}
+	.contact-text {
+		width: 130px;
+	}
+}
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+
+	.row-main {
+	    padding-top: 210px;
+	}
+
+	#first .row-main {
+		position: relative;
+    	margin: 166px -9px 0;
+    	padding-top: 0;
+	}
+	.nav-center {
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+	.masthead-nav {
+	    margin-top: 9px;
+	    > li {
+    		margin: 0px 27px;
+	    	> a {
+	     		line-height: 1.1;
+	    	}
+	    }
+	}
+	.masthead-brand {
+    	margin-top: 13px;
+	}
+	.lead {
+		font-size: 20px;
+		line-height: 29px;
+		max-width: 1000px;
+		a {
+			color: #000;
+			font-size: 14px;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+			margin-top: 28px;
+			display: inline-block;
+			line-height: 1.1;
+		}
+	}
+	.caption {
+		margin-top: 44px;
+		margin-left: 3px;
+		padding-right: 100px;
+	}
+	.cover-dark {
+		h3 {
+	    	font-size: 64px;
+	    	margin-left: 29px;
+	    	margin-top: 62px;
+	    }
+	    .col-offset-12 {
+	    	margin-left: 29px;
+    		margin-top: 86px;
+	    }
+	    .text-service {
+			margin-left: 32px;
+			margin-top: 13px;
+			font-size: 16px;
+			margin-bottom: 20px;
+	    }
+	}
+	.col-margin-left-11 {
+		margin-left: 11px;
+	}
+	.cover-service {
+		strong {
+			font-size: 18px;
+    		margin-top: 22px;
+    		margin-bottom: 36px;
+		}
+		h4 {
+			font-size: 24px;
+			margin-bottom: 15px;
+		}
+		.text-also {
+			font-size: 16px;
+			line-height: 24px;
+		}
+	}
+	.btn-lg {
+		font-size: 16px;
+		margin-top: 17px;
+	}
+	.cover-project {
+		hr {
+			display: none;
+		}
+	}
+	.item-project {
+		height: 400px;
+		background-size: cover;
+		background-position: top center;
+		background-repeat: no-repeat;
+		&[data-img="zakazaka"] {
+			background-image: url(../img/_zakazaka.jpg);
+		}
+		&[data-img="tomesto"] {
+			background-image: url(../img/_tomesto.jpg);
+		}
+		&[data-img="velogorod"] {
+			background-image: url(../img/_velogorod.jpg);
+		}
+		h3 {
+			margin-top: 223px;
+			font-size: 90px;
+		}
+		p {
+			font-size: 16px !important;
+			margin-left: 29px;
+			font-weight: bold;
+			&.fix-width {
+				margin-left: 0;
+				max-width: 1000px;
+				font-weight: normal;
+    			margin-top: 66px;
+			}
+		}
+	}
+	.item-project-also {
+    	padding-left: 80px;
+		strong {
+			font-size: 18px;
+    		margin-bottom: 37px;
+    		margin-top: 68px;
+		}
+		li a {
+			font-size: 24px;
+			font-weight: bold;
+			font-weight: 900;
+		}
+	}
+	.col-sm-pl {
+		padding-left: 50px;
+	}
+	.cover-client {
+		padding-left: 34px;
+		p {
+			font-size: 16px;
+		}
+		.img-client {
+    		margin: 79px 0 6px;
+    		text-align: center;
+    		margin-left: -29px;
+    		text-align: center;
+    		a {
+    			display: inline-block;
+    		}
+		}
+	}
+	.cover-contact {
+		padding-left: 33px;
+		strong {
+			font-size: 14px;
+		}
+		h4 {
+			font-size: 30px;
+			margin-top: 19px;
+			width: 283px;
+			margin-right: 117px;
+		}
+		p {
+			font-size: 16px;
+			margin-top: 10px;
+			margin-bottom: 79px;
+		}
+		.btn {
+			width: 195px;
+			margin-top: 8px;
+		}
+	}
+	.tel {
+		padding-bottom: 9px;
+	}
+	.contact-text {
+		padding-left: 46px;
+	}
+	.col-contact {
+		padding-left: 52px;
+		padding-bottom: 37px;
+	}
+}

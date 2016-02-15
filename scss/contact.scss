@@ -1,0 +1,71 @@
+.tel {
+	font-weight: bold;
+	font-family: $Proxima_Nova;
+	color:#fff;
+	line-height: 1;
+	padding-left: 6vw;
+	padding-bottom: 120px;
+	font-size: 120px;
+	font-size: 7rem;
+	padding-bottom: 7.5rem;
+}
+.cover-dark .cover-contact .row-main {
+	margin-top: 140px;
+    margin-bottom: 100px;
+}
+.cover-contact {
+	margin-bottom: 20px;
+	padding-bottom: 0;
+	p {
+		margin-top: 18px;
+		padding-left: 16px;
+		font-size: 16px;
+		font-size: 1rem;
+		padding-left: 1rem;
+	}
+	strong {
+		color: rgba(255,255,255,.4);
+		text-transform: uppercase;
+		display: inline-block;
+		font-size: 16px;
+		font-size: 1rem;
+	}
+	h4 {
+		padding-right: 55px;
+    	padding-right: 3.5rem;
+		font-weight: bold;
+		margin-top: 1em;
+		font-size: 36px;
+		font-size: 2.3rem;
+	}
+	.btn {
+		margin-top: 35px;
+		margin-top: 2.2rem;
+		transition: all .3s ease;
+		&.btn-primary {
+			&:hover {
+				background-color: #fff;
+				color: #000;
+			}
+		}
+		&.btn-default {
+			&:hover {
+				border: 1px solid #fff;
+				background-color: transparent;
+				color: #fff;
+			}
+		}
+	}
+}
+
+@media screen and (max-aspect-ratio: 17/10) and (min-width: 1651px) {
+	.cover-contact {
+		padding-bottom: 120px;
+	}
+}
+
+@media screen and (max-aspect-ratio: 14/10) and (min-width: $screen-md-min) { //and (min-width: 1651px) 
+	.cover-contact {
+		padding-bottom: 180px;
+	}
+}

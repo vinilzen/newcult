@@ -1,0 +1,236 @@
+@import "bootstrap";
+@import "icon";
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/proximanova-black-webfont.eot');
+    src: url('../fonts/proximanova-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proximanova-black-webfont.woff2') format('woff2'),
+         url('../fonts/proximanova-black-webfont.woff') format('woff'),
+         url('../fonts/proximanova-black-webfont.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/proximanova-bold-webfont.eot');
+    src: url('../fonts/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proximanova-bold-webfont.woff2') format('woff2'),
+         url('../fonts/proximanova-bold-webfont.woff') format('woff'),
+         url('../fonts/proximanova-bold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/proximanova-light-webfont.eot');
+    src: url('../fonts/proximanova-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proximanova-light-webfont.woff2') format('woff2'),
+         url('../fonts/proximanova-light-webfont.woff') format('woff'),
+         url('../fonts/proximanova-light-webfont.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/proximanova-reg-webfont.eot');
+    src: url('../fonts/proximanova-reg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proximanova-reg-webfont.woff2') format('woff2'),
+         url('../fonts/proximanova-reg-webfont.woff') format('woff'),
+         url('../fonts/proximanova-reg-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$Proxima_Nova: 'Proxima Nova', "Segoe UI",Roboto,"Droid Sans","Helvetica Neue",Arial,sans-serif;
+$font-size-nav: 16px;
+$max-flex-font: 1600px;
+
+
+/*
+ * Base structure
+ */
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  font-size: 16px;
+  @media (max-width: $max-flex-font) {
+    font-size: 1.13154vw;
+  }
+}
+body {
+  color: #fff;
+  text-align: center;
+  // transition: background-image 0.3s ease-in-out;
+}
+
+.masthead-brand {
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+}
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+  box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+}
+.site-wrapper-inner {
+  // display: table-cell;
+  position: relative;
+  vertical-align: top;
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+.row-main {
+	margin: 0 -40px;
+	padding-left: 6vw;
+}
+.col-padding-zero {
+	padding: 0;
+}
+.col-vw6 {
+	padding-left: 6vw;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 25px 40px;
+}
+
+.col_fullwidth {
+  margin-left: -6vw;
+}
+.cover-dark {
+  .row-main {
+    @media (min-width: $screen-md-min) {
+      padding-top: 410px;
+    }
+  }
+}
+.slide {
+  position: relative;
+  z-index: 1;
+  h2 {
+    opacity: 0;
+    &.active {
+      opacity: 1;
+    }
+  }
+}
+.cover-dark {
+  width: 100%;
+  h2 {
+    opacity: 0;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    z-index: 0;
+    transition: opacity .4s ease-in-out;
+    &.active {
+      opacity: 1;
+    }
+    &.active.fade {
+      opacity: .3;
+      // transition: opacity .4s ease-in-out;
+    }
+  }
+  &.active-cover {
+    h2 {
+      transition: opacity .5s ease-in;
+      // background-color: #191919;
+    }
+  }
+  &.goToFirstSlide {
+    h2 {
+      transition: opacity .2s ease-out;
+    }
+  }
+}
+
+.cover-active.slide {
+  h2 {
+    display: block;
+  }
+}
+
+.phone, .masthead-brand, .masthead-nav > li > a {
+  transition: color .6s ease-in-out .2s;
+}
+.masthead-brand {
+  transition: fill .6s ease-in-out .2s;
+}
+
+.text-white {
+  .phone, .masthead-brand {
+    color: #fff;
+    fill: #fff;
+  }
+  .masthead-nav > li {
+    > a {
+      color: #8f8f8f;
+      border-bottom-color: rgba(255,255,255,.15);
+      &:hover, &:focus {
+        color: #fff;
+        border-bottom-color: rgba(0,0,0,0);
+        transition: color .2s ease-in-out;
+      }
+    }
+    &.active a {
+      color: #fff;
+      border-bottom: 1px solid rgba(0,0,0,0);
+    }
+  }
+}
+body {
+  background-color: #1c1c1c;
+  &:after {
+    content: " ";
+    opacity: 0;
+    transition: opacity .5s ease-in;
+  }
+}
+.body-project-zakazaka,
+.body-project-tomesto,
+.body-project-velogorod {
+  &:after {
+    opacity: 1;
+    background: 50% 0% / cover fixed #1c1c1c;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+  &.fadeout {
+    &:after {
+      opacity: 0;
+      transition: opacity .4s ease-in-out;
+    }
+  }
+}
+.body-project-zakazaka:after {
+  background-image: url(../img/_zakazaka.jpg);
+}
+.body-project-tomesto:after {
+  background-image: url(../img/_tomesto.jpg);
+}
+.body-project-velogorod:after {
+  background-image: url(../img/_velogorod.jpg);
+}
+@import "typo";
+@import "header";
+@import "project";
+@import "client";
+@import "contact";
+@import "firstslide";
