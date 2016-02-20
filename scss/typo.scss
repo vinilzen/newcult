@@ -1,9 +1,10 @@
 h2 {
   font-size: 300px;
   font-size: 19rem;
-  color: rgba(255,255,255,.03);
+  // color: rgba(255,255,255,.03);
   text-shadow: none;
-  font-weight: bold
+  font-weight: bold;
+  color: rgba(255,255,255,.2);
 }
 h3 {
   font-size: 60px;
@@ -14,7 +15,7 @@ h4 {
   font-weight: bold;
 }
 strong {
-  font-style: 18px;
+  font-size: 18px;
 }
 #title-project {
   margin-left: -0.07em;
@@ -88,10 +89,11 @@ strong {
     font-family: $Proxima_Nova;
   }
   .text-also {
+    font-weight: 300;
     font-size: 1rem;
     margin-top: 2.6rem;
     margin-bottom: 2.7rem;
-    line-height: 1.55rem;
+    line-height: 1.55em;
     color: rgba(255,255,255,.4);
   }
 }
@@ -131,12 +133,8 @@ strong {
 [class^="hvr-"] {
   display: inline-block;
   vertical-align: middle;
-  margin: .4em;
-  padding: 1em;
   cursor: pointer;
-  background: #e1e1e1;
   text-decoration: none;
-  color: #666;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 .hvr-grow-shadow {
@@ -203,5 +201,54 @@ strong {
 @media (min-width: $screen-md-min) {
   .col-offset-12 {
     margin-left: 12vw;
+  }
+}
+label {
+  cursor: pointer;
+  a {
+    color: #000;
+    border-bottom: 1px solid #ddd;
+    &:hover, &:focus {
+      text-decoration: none;
+      border-bottom-color: transparent;
+    }
+  }
+}
+.icon-svg {
+  fill: rgba(0,0,0,.4);
+  width: 16px;
+  height: 16px;
+  transition: fill .3s ease;
+}
+/* .icon_instagram {
+height: 56.693px;
+width: 56.693px;
+} */
+
+.list-social li {
+  padding-left: 29px;
+  padding-right: 0;
+  a {
+    font-size: $font-size-nav;
+    text-decoration: none;
+    &:hover, &:focus {
+      text-decoration: none;
+      .icon-svg {
+        fill: #000;
+      }
+      span {
+        color:#000;
+      }
+    }
+  }
+}
+.cover-dark .list-social li a {
+  .icon-svg {
+    fill: rgba(255,255,255,0.5);
+  }
+  &:hover, &:focus {
+    .icon-svg {
+      fill: #fff;
+    }
   }
 }

@@ -39,6 +39,7 @@ gulp.task('browser-sync', ['sass'], function() {
             baseDir: "./"
         },
         open: false,
+        notify: false,
         ghostMode: false,
     });
 

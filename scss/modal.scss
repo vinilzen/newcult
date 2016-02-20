@@ -1,0 +1,157 @@
+#myModal {
+	color: #000;
+    background-color: #fff;
+	.modal-header, .modal-body {
+		max-width: 1400px;
+		margin: auto;
+	}
+	p {
+		font-size: 24px;
+	}
+	textarea {
+		padding-top: 16px;
+		height: 208px;
+	}
+	h5 {
+		font-weight: normal;
+		color: rgba(0,0,0,.35);
+		font-size: 18px;
+		text-transform: uppercase;
+		margin-bottom: 47px;
+	}
+	.form-control {
+    	max-width: 680px;
+		$pl_color: rgba(25, 25, 25, 0.25);
+		color: $pl_color;
+		/* do not group these rules */
+		&::-webkit-input-placeholder {
+		    color: $pl_color;
+		}
+		&:-moz-placeholder {
+		    /* FF 4-18 */
+		    color: $pl_color;
+		}
+		&::-moz-placeholder {
+		    /* FF 19+ */
+		    color: $pl_color;
+		}
+		&:-ms-input-placeholder {
+		    /* IE 10+ */
+		    color: $pl_color;
+		}
+	}
+	.padding-left {
+		padding-left: 110px;
+		margin-top: -12px;
+	}
+	.form-group {
+		margin-bottom: 20px;
+	}
+	h4 + p {
+		margin-top: -3px;
+		margin-bottom: 80px;
+    	font-weight: 300;
+	}
+
+	a {
+		strong {
+			font-size: 24px;
+			font-weight: 900;
+			border-bottom: 1px solid #ddd;
+    		display: inline-block;
+		}
+		&:hover {
+			text-decoration: none;
+			strong {
+				border-bottom-color: transparent;
+			}
+		}
+	}
+}
+
+#myModalLabel {
+	font-size: 72px;
+	color: #000;
+	font-weight: bold;
+}
+.btn-black {
+	color: #fff;
+	background-color: #000;
+	border: 1px solid transparent;
+	font-size: 24px;
+	font-weight: bold;
+	text-transform: uppercase;
+	border-radius: 0;
+	width: 250px;
+	height: 74px;
+    margin-top: 25px;
+	&:hover {
+		background-color: #fff;
+		border-color:#000;
+		color: #000;
+	}
+}
+.btn-link {
+	padding-left: 0;
+	color: #000;
+	text-decoration: none;
+    margin-bottom: 16px;
+	// border-bottom: 1px solid rgba(25, 25, 25, 0.15);
+	padding: 0;
+	line-height: 1;
+	&:hover, &:focus {
+		color: #000;
+		text-decoration: none;
+		border-bottom-color: transparent;
+	}
+}
+@media (max-width: $screen-xs-max) {
+	#myModalLabel {
+		font-size: 30px;
+	}
+	#myModal {
+		label {
+			font-size: 18px;
+		}
+		.form-control {
+			font-size: 18px;
+			height: 50px;
+			line-height: 50px;
+		}
+		.form-group {
+			margin-bottom: 10px;
+		}
+		.modal-header, .modal-body {
+			padding-left: 32px;
+			padding-right: 32px;
+		}
+		.modal-header {
+			position: relative;
+		    padding-top: 69px;
+		    padding-bottom: 18px;
+		    .close {
+		    	position: absolute;
+		    	right: 15px;
+		    	top:25px;
+		    	opacity: 1;
+		    	svg {
+		    		width: 20px;
+		    		height: 20px;
+		    	}
+		    }
+		}
+		textarea.form-control {
+			height: 100px;
+			line-height: 1;
+		}
+	}
+
+	.btn-black {
+		font-size: 16px;
+		width: 180px;
+		height: 50px;
+	}
+	.modal-open .masthead {
+		z-index: 1051;
+	}
+}
