@@ -9,14 +9,17 @@
 	font-size: 7rem;
 	padding-bottom: 7.5rem;
 }
-.cover-dark .cover-contact .row-main {
-	margin-top: 140px;
-    margin-bottom: 100px;
+.cover-dark .cover-contact {
+	padding-top: 140px;
+	.row-main {
+    	margin-bottom: 100px;
+    }
 }
 .cover-contact {
 	margin-bottom: 20px;
 	padding-bottom: 0;
 	p {
+		font-weight: 300;
 		margin-top: 18px;
 		padding-left: 16px;
 		font-size: 16px;

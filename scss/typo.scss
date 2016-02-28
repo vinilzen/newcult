@@ -1,10 +1,14 @@
 h2 {
-  font-size: 300px;
-  font-size: 19rem;
-  // color: rgba(255,255,255,.03);
+  font-size: 250px;
+  font-size: 16rem;
   text-shadow: none;
   font-weight: bold;
   color: rgba(255,255,255,.2);
+  font-size: 260px;
+  @media (max-width: 1440px) {
+    font-size: 250px;
+    font-size: 16rem;
+  }
 }
 h3 {
   font-size: 60px;
@@ -19,6 +23,9 @@ strong {
 }
 #title-project {
   margin-left: -0.07em;
+  &.transparent {
+    opacity: 0;
+  }
 }
 #title-client {
   margin-left: -0.07em;
