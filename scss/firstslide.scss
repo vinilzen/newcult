@@ -297,8 +297,20 @@ $duration: 0.12;
 		&[data-img="velogorod"] {
 			background-image: url(../img/_velogorod.jpg);
 		}
+		&[data-img="tvil"] {
+			background-image: url(../img/_tvil.jpg);
+		}
+		&[data-img="docturu"] {
+			background-image: url(../img/_docturu.jpg);
+		}
+		&[data-img="suzuki"] {
+			background-image: url(../img/_suzuki.jpg);
+		}
+		&[data-img="tm"] {
+			background-image: url(../img/_tm.jpg);
+		}
 		h3 {
-			margin-top: 223px;
+			margin-top: 180px;
 			font-size: 90px;
 		}
 		p {
@@ -504,6 +516,18 @@ $duration: 0.12;
 		}
 		&[data-img="velogorod"] {
 			background-image: url(../img/_velogorod.jpg);
+		}
+		&[data-img="tvil"] {
+			background-image: url(../img/_tvil.jpg);
+		}
+		&[data-img="docturu"] {
+			background-image: url(../img/_docturu.jpg);
+		}
+		&[data-img="suzuki"] {
+			background-image: url(../img/_suzuki.jpg);
+		}
+		&[data-img="tm"] {
+			background-image: url(../img/_tm.jpg);
 		}
 		h3 {
 			margin-top: 87px;

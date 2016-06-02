@@ -5066,8 +5066,20 @@ a:focus {
   .item-project[data-img="velogorod"] {
     background-image: url(../img/_velogorod.jpg);
   }
+  .item-project[data-img="tvil"] {
+    background-image: url(../img/_tvil.jpg);
+  }
+  .item-project[data-img="docturu"] {
+    background-image: url(../img/_docturu.jpg);
+  }
+  .item-project[data-img="suzuki"] {
+    background-image: url(../img/_suzuki.jpg);
+  }
+  .item-project[data-img="tm"] {
+    background-image: url(../img/_tm.jpg);
+  }
   .item-project h3 {
-    margin-top: 223px;
+    margin-top: 180px;
     font-size: 90px;
   }
   .item-project p {
@@ -5263,6 +5275,18 @@ a:focus {
   }
   .item-project[data-img="velogorod"] {
     background-image: url(../img/_velogorod.jpg);
+  }
+  .item-project[data-img="tvil"] {
+    background-image: url(../img/_tvil.jpg);
+  }
+  .item-project[data-img="docturu"] {
+    background-image: url(../img/_docturu.jpg);
+  }
+  .item-project[data-img="suzuki"] {
+    background-image: url(../img/_suzuki.jpg);
+  }
+  .item-project[data-img="tm"] {
+    background-image: url(../img/_tm.jpg);
   }
   .item-project h3 {
     margin-top: 87px;
