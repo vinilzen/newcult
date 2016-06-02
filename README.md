@@ -1,5 +1,8 @@
 # Newcult
 
-Demo http://test.to4ek.net/newcult/index.min.html
+Prod http://newcult.ru/
 
-На сервер загрузить папки img, fonts, js, css и index.min.html
+Demo http://test.to4ek.net/newcult/
+
+
+На сервер загрузить папки img, fonts, js, css и index.html
