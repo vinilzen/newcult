@@ -4325,6 +4325,14 @@ width: 56.693px;
   fill: #fff;
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
+.btn-link:any-link {
+  color: #333;
+}
+
 /*
  * Header
  */
@@ -4432,7 +4440,11 @@ width: 56.693px;
   cursor: pointer;
 }
 
-.item-project h3 {
+.item-project.item-project-also {
+  cursor: default;
+}
+
+.item-project h3, .item-project h3 a {
   font-family: "Proxima Nova", "Segoe UI", Roboto, "Droid Sans", "Helvetica Neue", Arial, sans-serif;
   line-height: 1em;
   color: rgba(255, 255, 255, 0.25);
@@ -4440,10 +4452,11 @@ width: 56.693px;
   margin-bottom: -0.4rem;
   transition: color 0.3s ease;
   font-size: 114px;
+  text-decoration: none;
 }
 
 @media (max-width: 1000px) {
-  .item-project h3 {
+  .item-project h3, .item-project h3 a {
     font-size: 7.6rem;
   }
 }
@@ -4521,6 +4534,14 @@ width: 56.693px;
   opacity: 1;
 }
 
+a:focus {
+  outline: none;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+
 .tel {
   font-weight: bold;
   font-family: "Proxima Nova", "Segoe UI", Roboto, "Droid Sans", "Helvetica Neue", Arial, sans-serif;
@@ -4588,6 +4609,10 @@ width: 56.693px;
 
 .btn.btn-default {
   border: 1px solid transparent;
+}
+
+.btn.btn-default:any-link {
+  color: #333;
 }
 
 .btn.btn-default:hover {

@@ -1,3 +1,5 @@
+a:focus {outline:none;}
+::-moz-focus-inner {border:0;}
 .tel {
 	font-weight: bold;
 	font-family: $Proxima_Nova;
@@ -57,6 +59,10 @@
 		}
 	}
 	&.btn-default {
+
+		&:any-link {
+			color: #333;
+		}
 
 		border: 1px solid transparent;
 		&:hover {

@@ -60,7 +60,7 @@ $(document).ready(function() {
         }
     }
 
-    setInterval(updateGradient,10);
+    var refreshIntervalId = setInterval(updateGradient,10);
 
 
     var sw = $('.site-wrapper'),
@@ -162,7 +162,7 @@ $(document).ready(function() {
       }
     });
 
-    $('.masthead-nav a[href^="#"]').click(function(e) {
+    $('.masthead-nav a[href^="#"], a.more-service[href^="#"]').click(function(e) {
 
         var $el = $(this),
             target = $el.attr('href');
@@ -288,13 +288,16 @@ $(document).ready(function() {
 
     function hoverIn () {
         $(this).addClass('item-hover');
+
         if ( $(window).width() > 1023 && project_active ) {
 
             clearTimeout(timer);
 
             var img = $(this).attr('data-img');
-            
+
             if (img){
+
+                clearInterval(refreshIntervalId);
                 
                 $('body').addClass('fadeout');
 
@@ -302,7 +305,7 @@ $(document).ready(function() {
 
                 timer2 = setTimeout(function(){
                     $('body').attr('class','');
-                    $('.after').css({'background-image': 'url(img/_'+img+'.jpg'});
+                    $('.after').css('background-image',"url('img/_"+img+".jpg')");
                     $('body').addClass('body-project-universal');
                     $('.cover-dark').css({'background': 'none'})
                 }, 200);
@@ -325,6 +328,7 @@ $(document).ready(function() {
                 $('body').attr('class','');
                 $('.after').css({'background-image': 'none'});
                 $('.cover-dark').css({'background-color': '#191919'});
+                refreshIntervalId = setInterval(updateGradient,10);
             }, 200);
         }
     }

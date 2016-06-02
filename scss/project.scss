@@ -8,7 +8,12 @@
 .item-project {
 	padding: 20px 10px 3.4rem 6vw;
     cursor: pointer;
-	h3 {
+
+	&.item-project-also {
+		cursor: default;
+	}
+
+	h3, h3 a {
 		font-family: $Proxima_Nova;
 		line-height: 1em;
 		color: rgba(255,255,255,.25);
@@ -16,6 +21,7 @@
 		margin-bottom: -0.4rem;
 		transition: color 0.3s ease;
 		font-size: 114px;
+		text-decoration: none;
 		@media (max-width: 1000px) {
 			font-size: 7.6rem;
 		}
